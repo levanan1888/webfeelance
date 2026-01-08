@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Liên hệ - Blog Name</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #334155;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display transition-colors duration-200">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-[#e7f3ec] dark:border-slate-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-4">
+                    <div class="size-8 text-primary">
+                        <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                                fill="currentColor" fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-white text-lg font-bold tracking-tight">Blog Name</h2>
+                </div>
+                <!-- Nav Links -->
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-8">
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                            href="#">Home</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                            href="#">Blog</a>
+                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                            href="#">About</a>
+                        <a class="text-primary text-sm font-bold relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary"
+                            href="#">Contact</a>
+                    </nav>
+                    <button
+                        class="flex items-center justify-center size-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <!-- Page Heading -->
+            <div class="mb-16 text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white mb-4">
+                    Liên hệ với tôi
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Cảm ơn bạn đã ghé thăm. Dù bạn có câu hỏi về bài viết, lời mời hợp tác hay chỉ muốn chào hỏi, tôi
+                    rất mong nhận được tin từ bạn.
+                </p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
+                <!-- Left Column: Contact Info -->
+                <div class="flex-1 lg:max-w-[400px] flex flex-col gap-8">
+                    <div class="space-y-2">
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Thông tin liên lạc</h2>
+                        <p class="text-slate-500 dark:text-slate-400">Kết nối trực tiếp qua email hoặc mạng xã hội.</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <!-- Email Card -->
+                        <div
+                            class="group flex gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Email</h3>
+                                <a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors"
+                                    href="mailto:author@example.com">author@example.com</a>
+                            </div>
+                        </div>
+                        <!-- Social Card -->
+                        <div
+                            class="group flex gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                                <span class="material-symbols-outlined">share</span>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Mạng xã hội</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">LinkedIn, Twitter/X, Facebook</p>
+                            </div>
+                        </div>
+                        <!-- Location Card -->
+                        <div
+                            class="group flex gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/50 dark:hover:border-primary/50 transition-colors">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">Địa điểm</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Thành phố Hồ Chí Minh, Việt Nam
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Contact Form -->
+                <div
+                    class="flex-1 bg-white dark:bg-slate-900/30 p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <form class="flex flex-col gap-6">
+                        <!-- Name & Email Row -->
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <label class="flex flex-col flex-1 gap-2">
+                                <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Họ và tên</span>
+                                <input
+                                    class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-950 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
+                                    placeholder="Nhập tên của bạn" type="text" />
+                            </label>
+                            <label class="flex flex-col flex-1 gap-2">
+                                <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Email</span>
+                                <input
+                                    class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-950 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
+                                    placeholder="Nhập địa chỉ email" type="email" />
+                            </label>
+                        </div>
+                        <!-- Subject -->
+                        <label class="flex flex-col gap-2">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Tiêu đề</span>
+                            <input
+                                class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-950 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
+                                placeholder="Nhập tiêu đề tin nhắn" type="text" />
+                        </label>
+                        <!-- Message -->
+                        <label class="flex flex-col gap-2">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Nội dung tin
+                                nhắn</span>
+                            <textarea
+                                class="w-full resize-y rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-950 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all"
+                                placeholder="Viết tin nhắn của bạn ở đây..." rows="6"></textarea>
+                        </label>
+                        <!-- Submit Button -->
+                        <div class="pt-2">
+                            <button
+                                class="flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-sm font-bold text-black shadow-sm transition-all hover:bg-opacity-90 hover:shadow-md active:scale-[0.98] w-full md:w-auto">
+                                <span>Gửi tin nhắn</span>
+                                <span class="material-symbols-outlined text-[20px]">send</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Map Placeholder / Image -->
+            <div class="mt-20 rounded-2xl overflow-hidden h-[300px] w-full relative">
+                <img alt="Abstract minimalist cityscape of Ho Chi Minh City with a soft green filter"
+                    class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                    data-alt="Abstract minimalist cityscape of Ho Chi Minh City with a soft green filter"
+                    data-location="Ho Chi Minh City"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-nD9JITUM_4P5bnqQNr3H4vq-Cs_SxqgNqGD5IVC0-K9Gp99dI0qbetEKfpX_z6lMNrcAvlUDXSvaT8jm-0vpZnWTNGJQIifpVWFemfV_X-DcJZ8r1ITaH9Az4OPcowR5nOz-XiB3OpXxjfJ-px6ow3io8e6JLz2eW-7cGcf4WGXfxfcWI4rppF5iVwXL0C0o5mYGCgh3lVj9ZaQsSUwPEAf63ZOq9-4mz7-LGpgs9ampNcOfrihtg8x1lcXMJCMQwSU4Zxoqqgo" />
+                <div
+                    class="absolute bottom-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-200">Ho Chi
+                        Minh City</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#0d1b13] border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4 text-slate-900 dark:text-white">
+                        <div class="size-6 text-primary">
+                            <svg class="w-full h-full" fill="none" viewbox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <span class="font-bold text-xl tracking-tight">Blog Name</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-sm mb-6 leading-relaxed">
+                        Nơi chia sẻ kiến thức, trải nghiệm công việc và tư duy phát triển bản thân. Hướng tới sự bình an
+                        và chuyên nghiệp.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                                class="material-symbols-outlined">public</span></a>
+                        <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                                class="material-symbols-outlined">post_add</span></a>
+                        <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                                class="material-symbols-outlined">rss_feed</span></a>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Khám phá</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
+                                href="#">Về tôi</a></li>
+                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
+                                href="#">Bài viết mới</a></li>
+                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
+                                href="#">Chủ đề</a></li>
+                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
+                                href="#">Tài nguyên</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Đăng ký nhận tin</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Nhận những bài viết mới nhất trực tiếp
+                        vào hộp thư của bạn.</p>
+                    <form class="flex flex-col gap-2">
+                        <input
+                            class="w-full rounded-lg border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-slate-900 px-3 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
+                            placeholder="Email của bạn" type="email" />
+                        <button
+                            class="w-full rounded-lg bg-slate-900 dark:bg-white text-white dark:text-black font-bold py-2 text-sm hover:opacity-90 transition-opacity"
+                            type="submit">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+                <p>© 2023 Blog Name. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

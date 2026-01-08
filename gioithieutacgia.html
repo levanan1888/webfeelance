@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Giới thiệu Tác giả - About the Author</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "text-main": "#0d1b13",
+                        "text-muted": "#4c9a6c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f6f8f7;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cfe7d9;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #13ec6d;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white transition-colors duration-200">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-[#e7f3ec] dark:border-[#1e3a29]">
+            <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
+                <div class="flex items-center gap-3 text-text-main dark:text-white">
+                    <div class="size-8 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">spa</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight">Mindful<span class="text-primary">Growth</span></h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+                    <a class="text-sm font-medium text-primary" href="#">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Blog</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Toolkit</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="hidden sm:flex h-10 px-5 items-center justify-center rounded-lg bg-primary hover:bg-primary/90 transition-colors text-black text-sm font-bold">
+                        Subscribe
+                    </button>
+                    <!-- Mobile Menu Icon -->
+                    <button class="md:hidden text-text-main dark:text-white">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content Wrapper -->
+        <main class="flex-1 flex flex-col items-center w-full">
+            <!-- Hero Section -->
+            <section class="w-full max-w-5xl px-6 py-12 md:py-20">
+                <div class="flex flex-col-reverse md:flex-row gap-10 md:gap-16 items-center">
+                    <div class="flex-1 flex flex-col gap-6 text-center md:text-left">
+                        <h1
+                            class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-text-main dark:text-white">
+                            Hi, I'm Alex. <br />I explore the art of <span class="relative inline-block text-primary">
+                                Growing
+                                <svg class="absolute w-full h-3 -bottom-1 left-0 text-primary/30"
+                                    preserveaspectratio="none" viewbox="0 0 100 10">
+                                    <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="8">
+                                    </path>
+                                </svg>
+                            </span> &amp; Living.
+                        </h1>
+                        <p class="text-lg text-text-muted dark:text-gray-300 md:max-w-md leading-relaxed">
+                            I'm a writer, consultant, and lifelong learner. I share my knowledge, work experiences, and
+                            mindset shifts to help you find peace and professional growth in a chaotic world.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                            <button
+                                class="h-12 px-8 rounded-lg bg-primary hover:bg-primary/90 text-black font-bold transition-transform hover:-translate-y-0.5">
+                                Read My Story
+                            </button>
+                            <button
+                                class="h-12 px-8 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium transition-colors">
+                                View My Work
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex justify-center md:justify-end relative">
+                        <!-- Decorative blob background -->
+                        <div
+                            class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-75 md:scale-90 -z-10 animate-pulse">
+                        </div>
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl relative z-0">
+                            <div class="w-full h-full bg-cover bg-center"
+                                data-alt="Portrait of a smiling professional man with glasses in a light shirt"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBv2MDvgh6-0y0Drtprf7jzuhkhGsOIE5QLPqz8Z2lMrgl1QSPQ964ln_yDdA1QLHJpLTGzL2SZB6AyYqBRTwvi14LpcjyY_Ac08woLgY159c_t6K_H6zQfNVD3YIzzl3Fob__80Kod-3gKA6mBThkYwgeMDt59A2ADYze853xYmmcPhogISTp-9efXwUrE8SWmPunJ-3-NznHwB90OjZqS3m3r-2-fWVfBUlGCYsXZVYAtMVSxDm62wKH3Zy38Q0Y4ytRpqZ_A7l4');">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Philosophy Section -->
+            <section
+                class="w-full bg-white dark:bg-[#152a1f] py-16 md:py-24 border-y border-gray-100 dark:border-gray-800">
+                <div class="max-w-5xl mx-auto px-6 w-full">
+                    <div class="flex flex-col gap-4 mb-12 text-center md:text-left">
+                        <h2 class="text-3xl font-bold tracking-tight text-text-main dark:text-white">My Core Philosophy
+                        </h2>
+                        <p class="text-text-muted dark:text-gray-400 max-w-2xl">Values that drive my work, my writing,
+                            and my daily life.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="group p-6 rounded-2xl bg-background-light dark:bg-background-dark border border-[#cfe7d9] dark:border-[#1e3a29] hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined">psychology</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-text-main dark:text-white">Mindset</h3>
+                            <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                                Cultivating a resilient and positive mental attitude is the foundation of all success.
+                                It starts within.
+                            </p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="group p-6 rounded-2xl bg-background-light dark:bg-background-dark border border-[#cfe7d9] dark:border-[#1e3a29] hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined">work</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-text-main dark:text-white">Work</h3>
+                            <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                                Professional excellence and ethical standards. Doing good work is a form of personal
+                                dignity.
+                            </p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="group p-6 rounded-2xl bg-background-light dark:bg-background-dark border border-[#cfe7d9] dark:border-[#1e3a29] hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined">trending_up</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-text-main dark:text-white">Growth</h3>
+                            <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                                Continuous self-improvement. The goal isn't perfection, but becoming 1% better every
+                                single day.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Timeline / Journey Section -->
+            <section class="w-full max-w-4xl px-6 py-16 md:py-24">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-bold tracking-wider uppercase text-sm">Milestones</span>
+                    <h2 class="text-3xl font-bold mt-2 text-text-main dark:text-white">My Journey So Far</h2>
+                </div>
+                <div class="relative">
+                    <!-- Vertical Line -->
+                    <div
+                        class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-700 -translate-x-1/2">
+                    </div>
+                    <div class="space-y-12">
+                        <!-- Item 1 -->
+                        <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                            <div class="md:w-1/2 md:pr-12 md:text-right pl-20 md:pl-0 w-full mb-2 md:mb-0">
+                                <h3 class="text-lg font-bold text-text-main dark:text-white">Started Career in Tech</h3>
+                                <p class="text-text-muted dark:text-gray-400 text-sm">Moved to the city and began as a
+                                    junior developer.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-background-dark border-4 border-primary z-10 shadow-sm">
+                                <span class="text-xs font-bold text-text-main dark:text-white">2015</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-20 w-full">
+                                <!-- Empty for layout balance on desktop -->
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                            <div class="md:w-1/2 md:pr-12 md:text-right pl-20 md:pl-0 w-full md:order-1 order-2">
+                                <!-- Empty -->
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-background-dark border-4 border-primary z-10 shadow-sm">
+                                <span class="text-xs font-bold text-text-main dark:text-white">2017</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-20 w-full md:order-2 order-1 mb-2 md:mb-0">
+                                <h3 class="text-lg font-bold text-text-main dark:text-white">Launched First Blog</h3>
+                                <p class="text-text-muted dark:text-gray-400 text-sm">Started sharing learnings about
+                                    productivity and code.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                            <div class="md:w-1/2 md:pr-12 md:text-right pl-20 md:pl-0 w-full mb-2 md:mb-0">
+                                <h3 class="text-lg font-bold text-text-main dark:text-white">Senior Consultant Role</h3>
+                                <p class="text-text-muted dark:text-gray-400 text-sm">Led teams across 3 continents,
+                                    learning about leadership.</p>
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-background-dark border-4 border-primary z-10 shadow-sm">
+                                <span class="text-xs font-bold text-text-main dark:text-white">2019</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-20 w-full">
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                            <div class="md:w-1/2 md:pr-12 md:text-right pl-20 md:pl-0 w-full md:order-1 order-2">
+                            </div>
+                            <div
+                                class="absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-primary z-10 shadow-lg shadow-primary/30">
+                                <span class="material-symbols-outlined text-black text-sm">star</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 pl-20 w-full md:order-2 order-1 mb-2 md:mb-0">
+                                <h3 class="text-lg font-bold text-text-main dark:text-white">Founded This Community</h3>
+                                <p class="text-text-muted dark:text-gray-400 text-sm">Dedicated fully to writing and
+                                    teaching growth mindset.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Toolkit Section -->
+            <section class="w-full bg-white dark:bg-[#152a1f] py-16 px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+                        <div>
+                            <h2 class="text-2xl font-bold text-text-main dark:text-white">My Toolkit</h2>
+                            <p class="text-text-muted dark:text-gray-400 mt-2">The resources I use daily to stay sharp.
+                            </p>
+                        </div>
+                        <a class="text-primary font-medium hover:underline text-sm flex items-center gap-1" href="#">
+                            View all resources <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Tool 1 -->
+                        <div
+                            class="flex flex-col gap-3 p-4 rounded-xl bg-background-light dark:bg-background-dark border border-transparent hover:border-primary/30 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined">menu_book</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-text-main dark:text-white">Reading</h4>
+                                <p class="text-xs text-text-muted dark:text-gray-500">Kindle &amp; Audible</p>
+                            </div>
+                        </div>
+                        <!-- Tool 2 -->
+                        <div
+                            class="flex flex-col gap-3 p-4 rounded-xl bg-background-light dark:bg-background-dark border border-transparent hover:border-primary/30 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined">edit_note</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-text-main dark:text-white">Writing</h4>
+                                <p class="text-xs text-text-muted dark:text-gray-500">Obsidian &amp; Notion</p>
+                            </div>
+                        </div>
+                        <!-- Tool 3 -->
+                        <div
+                            class="flex flex-col gap-3 p-4 rounded-xl bg-background-light dark:bg-background-dark border border-transparent hover:border-primary/30 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined">self_improvement</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-text-main dark:text-white">Meditation</h4>
+                                <p class="text-xs text-text-muted dark:text-gray-500">Headspace App</p>
+                            </div>
+                        </div>
+                        <!-- Tool 4 -->
+                        <div
+                            class="flex flex-col gap-3 p-4 rounded-xl bg-background-light dark:bg-background-dark border border-transparent hover:border-primary/30 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-green-100 text-green-600 flex items-center justify-center">
+                                <span class="material-symbols-outlined">fitness_center</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-text-main dark:text-white">Health</h4>
+                                <p class="text-xs text-text-muted dark:text-gray-500">Whoop Strap</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Newsletter CTA -->
+            <section class="w-full px-6 py-20">
+                <div
+                    class="max-w-4xl mx-auto bg-[#0d1b13] rounded-3xl p-8 md:p-12 relative overflow-hidden text-center">
+                    <!-- Decorative background elements -->
+                    <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary/10 rounded-full blur-3xl">
+                    </div>
+                    <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center gap-6">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-primary backdrop-blur-sm border border-white/5">
+                            <span class="material-symbols-outlined text-3xl">mail</span>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-3">Join the Inner Circle</h2>
+                            <p class="text-gray-400 max-w-lg mx-auto">
+                                Get my weekly 5-minute newsletter with tips on growth, mindset, and finding peace in
+                                your career.
+                            </p>
+                        </div>
+                        <form class="flex flex-col sm:flex-row w-full max-w-md gap-3 mt-2">
+                            <input
+                                class="flex-1 h-12 rounded-lg bg-white/10 border border-white/10 text-white placeholder-gray-500 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all"
+                                placeholder="Enter your email" type="email" />
+                            <button
+                                class="h-12 px-6 rounded-lg bg-primary hover:bg-primary/90 text-black font-bold transition-colors whitespace-nowrap"
+                                type="button">
+                                Subscribe Free
+                            </button>
+                        </form>
+                        <p class="text-xs text-gray-600 mt-2">No spam, just wisdom. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="w-full border-t border-[#e7f3ec] dark:border-[#1e3a29] bg-white dark:bg-background-dark pt-12 pb-8">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-2 mb-4 text-text-main dark:text-white">
+                            <span class="material-symbols-outlined text-primary">spa</span>
+                            <span class="font-bold">MindfulGrowth</span>
+                        </div>
+                        <p class="text-sm text-text-muted dark:text-gray-400">
+                            Designing a life of intention, balance, and professional excellence.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-text-main dark:text-white mb-4">Explore</h4>
+                        <ul class="flex flex-col gap-2 text-sm text-text-muted dark:text-gray-400">
+                            <li><a class="hover:text-primary transition-colors" href="#">About Me</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Articles</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Bookshelf</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Uses</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-text-main dark:text-white mb-4">Connect</h4>
+                        <ul class="flex flex-col gap-2 text-sm text-text-muted dark:text-gray-400">
+                            <li><a class="hover:text-primary transition-colors" href="#">Twitter / X</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-text-main dark:text-white mb-4">Legal</h4>
+                        <ul class="flex flex-col gap-2 text-sm text-text-muted dark:text-gray-400">
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="pt-8 border-t border-[#f0f7f3] dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-text-muted dark:text-gray-500">
+                    <p>© 2023 MindfulGrowth. All rights reserved.</p>
+                    <p>Designed with <span class="text-primary">♥</span> for the mindful.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

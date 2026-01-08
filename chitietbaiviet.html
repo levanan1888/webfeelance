@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Art of Mindful Coding - Alex Nguyen Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "background-light": "#f8fcfa",
+                        "background-dark": "#102218",
+                        "text-main": "#0d1b13",
+                        "text-secondary": "#4c9a6c",
+                        "border-light": "#e7f3ec",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for code blocks */
+        .code-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .code-scroll::-webkit-scrollbar-track {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+
+        .code-scroll::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/30">
+    <!-- Reading Progress Bar (Fixed) -->
+    <div class="fixed top-0 left-0 w-full z-50 h-1 bg-transparent">
+        <div class="h-full bg-primary shadow-[0_0_10px_rgba(19,236,109,0.5)]" style="width: 35%;"></div>
+    </div>
+    <!-- Navigation -->
+    <header class="sticky top-0 z-40 w-full border-b border-border-light bg-background-light/80 backdrop-blur-md">
+        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-8">
+                <a class="flex items-center gap-3 text-text-main hover:opacity-80 transition-opacity" href="#">
+                    <div class="flex size-8 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                        <span class="material-symbols-outlined text-[24px]">code</span>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight">Alex Nguyen Blog</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+                    <a class="text-sm font-medium text-primary" href="#">Articles</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div
+                    class="hidden sm:flex items-center w-64 rounded-lg bg-white border border-border-light focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+                    <div class="pl-3 text-text-secondary flex items-center">
+                        <span class="material-symbols-outlined text-[20px]">search</span>
+                    </div>
+                    <input
+                        class="w-full border-none bg-transparent py-2 pl-2 pr-4 text-sm text-text-main focus:ring-0 placeholder:text-text-secondary/70"
+                        placeholder="Search..." type="text" />
+                </div>
+                <button class="md:hidden p-2 text-text-main">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col items-center pb-20">
+        <!-- Article Header Section -->
+        <article class="w-full max-w-[800px] px-4 pt-10 sm:px-6 lg:px-8">
+            <!-- Breadcrumbs -->
+            <div class="mb-6 flex items-center gap-2 text-sm">
+                <a class="flex items-center gap-1 font-medium text-text-secondary hover:text-primary transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+                    Back to Articles
+                </a>
+                <span class="text-text-secondary/40">/</span>
+                <span class="font-medium text-text-main">Mindset</span>
+            </div>
+            <!-- Title -->
+            <h1
+                class="mb-6 text-4xl font-black leading-tight tracking-tight text-text-main md:text-5xl lg:leading-[1.1]">
+                The Art of Mindful Coding: How to Find Peace in Algorithms
+            </h1>
+            <!-- Author Metadata -->
+            <div
+                class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-border-light pb-8">
+                <div class="flex items-center gap-4">
+                    <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-200">
+                        <div class="h-full w-full bg-cover bg-center" data-alt="Portrait of the author Alex Nguyen"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE9Sno7HFwV26BL7mgJDWUez_bJfptvac-kUnREWCbqQFzgqc3cIJ8IxjjuTj_-LQgGmDO3VhkYkMTT4Vwop1Nk_qW75s_izSvPUtQydx6mkeUbHRNeYmQ3OuSK2PBIwQXcoSjx0b8FOdV0wkIn7O9PNIXjGW4vbU9Is1hXTtf7pJLmIXwGa9AYp7sktXB6qxSlYp8aLbY59_eXQRAlk7OMxbbDSmg4JOWobMV3P5OkF3ERnOEeoK_V9isUk7NntqKM6sX05c-Lk4');">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-bold text-text-main">Alex Nguyen</p>
+                        <div class="flex items-center gap-2 text-sm text-text-secondary">
+                            <span>Oct 24, 2023</span>
+                            <span class="h-1 w-1 rounded-full bg-text-secondary/40"></span>
+                            <span>6 min read</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        class="flex h-9 w-9 items-center justify-center rounded-full bg-border-light/50 text-text-main hover:bg-primary hover:text-white transition-all">
+                        <span class="material-symbols-outlined text-[18px]">share</span>
+                    </button>
+                    <button
+                        class="flex h-9 w-9 items-center justify-center rounded-full bg-border-light/50 text-text-main hover:bg-primary hover:text-white transition-all">
+                        <span class="material-symbols-outlined text-[18px]">bookmark</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Featured Image -->
+            <figure class="mb-12 overflow-hidden rounded-xl shadow-sm">
+                <div class="aspect-[16/9] w-full bg-gray-100 bg-cover bg-center"
+                    data-alt="A peaceful minimalist desk setup with plants and a laptop"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmORW5qXl-KVyMif-pFZewETeBTtkQ6ot2Wg256yVylVYFTDg7U2GscFdDXT_SE-Fu1kw0JrUr9WcPU8iciyvB6zOGoI4KareZyJJR_CVWXdIqVsl2j9Ra1PwwiAvX-ZD1AfxD3GApbf1UmCls77LC9aE1upHRtzM9aEwQHlHjWuAcE9VLhUfeip3bRBwmJNxuN6FriTFP_osw_KvsyCgKfvJGPmI3Y2uXxCDwHy95OpUdYeVVJYM56Aco8FOjo5ZHhXKTiEa5OOc');">
+                </div>
+                <figcaption class="mt-3 text-center text-sm text-text-secondary">
+                    Finding tranquility in the digital workspace.
+                </figcaption>
+            </figure>
+            <!-- Content Body -->
+            <div class="prose prose-lg prose-green max-w-none text-text-main">
+                <p class="mb-8 text-xl leading-relaxed text-text-main/80 font-medium">
+                    In a world obsessed with speed and shipping features, we often forget that code is an expression of
+                    thought. What if we approached our IDE not as a battlefield of bugs, but as a canvas for clarity?
+                </p>
+                <p class="mb-6 text-lg leading-relaxed">
+                    I used to code with anxiety. Every red squiggle in VS Code felt like a personal judgment. The
+                    deadline was a guillotine hanging over my neck. But over the years, I've realized that the state of
+                    my code often reflects the state of my mind. Chaotic mind, spaghetti code. Peaceful mind, elegant
+                    solutions.
+                </p>
+                <h2 class="mt-12 mb-6 text-2xl font-bold tracking-tight text-text-main">Why Mindset Matters</h2>
+                <p class="mb-6 text-lg leading-relaxed">
+                    Mindfulness in coding isn't about meditating while you type. It's about being present with the
+                    problem. It's about resisting the urge to copy-paste from Stack Overflow blindly and instead taking
+                    a breath to understand <em>why</em> something is broken.
+                </p>
+                <div class="my-10 border-l-4 border-primary bg-primary/5 p-6 rounded-r-lg">
+                    <p class="text-xl font-medium italic leading-relaxed text-text-main">
+                        "Growth happens when we step outside our comfort zone, but wisdom happens when we pause to
+                        reflect on what we found there."
+                    </p>
+                </div>
+                <p class="mb-6 text-lg leading-relaxed">
+                    When we slow down, we actually move faster. We write fewer bugs. We design better architectures. We
+                    create software that is maintainable because we took the time to care for it.
+                </p>
+                <h2 class="mt-12 mb-6 text-2xl font-bold tracking-tight text-text-main">Practical Steps to Mindful
+                    Coding</h2>
+                <ul class="mb-8 list-none space-y-4 pl-0">
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1.5 flex h-2 w-2 shrink-0 rounded-full bg-primary"></span>
+                        <span class="text-lg leading-relaxed"><strong>Single-tasking:</strong> Close the Slack
+                            notifications. Turn off the phone. Focus on one function at a time.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1.5 flex h-2 w-2 shrink-0 rounded-full bg-primary"></span>
+                        <span class="text-lg leading-relaxed"><strong>Naming things clearly:</strong> Be kind to your
+                            future self. Variable names like <code>data</code> or <code>temp</code> are acts of violence
+                            against readability.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1.5 flex h-2 w-2 shrink-0 rounded-full bg-primary"></span>
+                        <span class="text-lg leading-relaxed"><strong>The 5-minute pause:</strong> If you're stuck for
+                            more than 20 minutes, step away. Walk. Drink water. Let the subconscious solve it.</span>
+                    </li>
+                </ul>
+                <h3 class="mt-8 mb-4 text-xl font-bold text-text-main">Example: Readable vs. Clever</h3>
+                <p class="mb-4 text-lg leading-relaxed">Consider this transformation. We often try to be "clever" with
+                    one-liners, but clarity brings peace.</p>
+                <div class="relative mb-10 overflow-hidden rounded-lg bg-[#1e293b] text-white shadow-lg">
+                    <div class="flex items-center justify-between bg-[#0f172a] px-4 py-2">
+                        <span class="text-xs font-medium text-gray-400">clean_code.js</span>
+                        <div class="flex gap-1.5">
+                            <div class="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+                            <div class="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+                            <div class="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+                        </div>
+                    </div>
+                    <div class="code-scroll overflow-x-auto p-4 text-sm font-mono leading-loose">
+                        <pre><code><span class="text-gray-500">// Avoid: Hard to read, high cognitive load</span>
+<span class="text-purple-400">const</span> <span class="text-blue-400">u</span> = <span class="text-yellow-300">users</span>.<span class="text-blue-300">find</span>(x =&gt; x.id === <span class="text-green-300">1</span>);
+
+<span class="text-gray-500">// Prefer: Explicit, descriptive, peaceful</span>
+<span class="text-purple-400">const</span> <span class="text-blue-400">currentUser</span> = <span class="text-yellow-300">usersList</span>.<span class="text-blue-300">find</span>((<span class="text-orange-300">user</span>) =&gt; {
+  <span class="text-purple-400">return</span> <span class="text-orange-300">user</span>.id === <span class="text-green-300">activeUserId</span>;
+});</code></pre>
+                    </div>
+                </div>
+                <p class="text-lg leading-relaxed">
+                    By making our code readable, we reduce the mental energy required to understand it later. This
+                    preservation of energy is the essence of sustainable development.
+                </p>
+            </div>
+            <!-- Tags -->
+            <div class="mt-12 flex flex-wrap gap-2 pt-8 border-t border-border-light">
+                <span class="text-sm font-medium text-text-secondary mr-2 py-1">Tags:</span>
+                <a class="rounded-full bg-background-light border border-border-light px-4 py-1 text-sm font-medium text-text-main hover:border-primary hover:text-primary transition-colors"
+                    href="#">#Mindset</a>
+                <a class="rounded-full bg-background-light border border-border-light px-4 py-1 text-sm font-medium text-text-main hover:border-primary hover:text-primary transition-colors"
+                    href="#">#Coding</a>
+                <a class="rounded-full bg-background-light border border-border-light px-4 py-1 text-sm font-medium text-text-main hover:border-primary hover:text-primary transition-colors"
+                    href="#">#Productivity</a>
+                <a class="rounded-full bg-background-light border border-border-light px-4 py-1 text-sm font-medium text-text-main hover:border-primary hover:text-primary transition-colors"
+                    href="#">#MentalHealth</a>
+            </div>
+            <!-- Interaction Bar -->
+            <div class="mt-10 flex items-center justify-between rounded-xl bg-primary/5 p-6">
+                <div class="flex items-center gap-4">
+                    <button
+                        class="group flex items-center gap-2 rounded-lg bg-white px-4 py-2 font-medium text-text-main shadow-sm transition-all hover:bg-primary hover:text-white">
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover:scale-110">thumb_up</span>
+                        <span>Helpful</span>
+                    </button>
+                    <span class="text-sm font-medium text-text-secondary">124 people found this helpful</span>
+                </div>
+                <div class="flex gap-3">
+                    <a class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-text-main shadow-sm hover:text-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">link</span>
+                    </a>
+                    <a class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-text-main shadow-sm hover:text-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">mail</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <!-- Related Articles Section -->
+        <section class="mt-24 w-full max-w-7xl border-t border-border-light bg-[#fbfdfc] px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-[800px] xl:max-w-none">
+                <div class="mb-10 flex items-center justify-between">
+                    <h3 class="text-2xl font-bold text-text-main">Read Next</h3>
+                    <a class="group flex items-center gap-1 text-sm font-medium text-primary" href="#">
+                        View all articles
+                        <span
+                            class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+                    <!-- Card 1 -->
+                    <a class="group flex flex-col gap-4 rounded-xl bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+                        href="#">
+                        <div class="aspect-[16/10] w-full overflow-hidden rounded-lg bg-gray-100">
+                            <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Laptop on a wooden table with code on screen"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7g9xqsJTEX_e5kBy0N58fiUdcFkcn5n62plwGgmIjWr55YHrYALy7So86Da2yjIVpyk-aHLYD_ktAbUTFxyZUfeldCRBVj_i_qP3Rj4pAxr7tnB4jN3BqHPiWrIIePGK1uYAKeSpSGdF2PIAkaJUpI2S-MfAlDgFAmFB-vKHKXxIx-J5spRzJQtb6WNKLuTz4HuaU0LvdYQ4zdzb5o486Bdo13WrZynHqVfx2-xjjOdbkYV6WxZnR6wIyuk_5LirBhICjjcMJfGs');">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-primary">Career</span>
+                            <h4
+                                class="text-xl font-bold leading-tight text-text-main group-hover:text-primary transition-colors">
+                                Why Senior Engineers Write Less Code</h4>
+                            <p class="text-sm text-text-secondary line-clamp-2">Moving from output to outcome is the key
+                                transition in any engineering career path.</p>
+                            <span class="mt-2 text-xs font-medium text-text-secondary/60">Nov 02, 2023 • 8 min
+                                read</span>
+                        </div>
+                    </a>
+                    <!-- Card 2 -->
+                    <a class="group flex flex-col gap-4 rounded-xl bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+                        href="#">
+                        <div class="aspect-[16/10] w-full overflow-hidden rounded-lg bg-gray-100">
+                            <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Abstract minimal nature landscape with fog"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyx3M_1c4l6kMaExcbtzIa48btuPAcg-cc1tFKFPfYUs2SlpdvRpd8VyH_DpQAqB8hVUjuvNkU8FYv25D117XG4IPfyq9Ak06ZQv2bIdC5-DqmSsWTMblxcbPHtIWwA1Niu19wZ-1CJOBSYPcl1KSQzgibkH5gEmcPa6DkIeJPbnUjFX2pgIQDvpIEXI7vXkSTF7gUj7Sb3C-WCKdV9M2whF2E3b3SxoKuUTxF_KZUDS2QaAwsDuzQLJnHxnbaWCgJyV2koUeNKqU');">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-primary">Lifestyle</span>
+                            <h4
+                                class="text-xl font-bold leading-tight text-text-main group-hover:text-primary transition-colors">
+                                Digital Minimalism for Developers</h4>
+                            <p class="text-sm text-text-secondary line-clamp-2">How to reclaim your attention span in an
+                                age of constant notifications and Jira tickets.</p>
+                            <span class="mt-2 text-xs font-medium text-text-secondary/60">Sep 15, 2023 • 5 min
+                                read</span>
+                        </div>
+                    </a>
+                    <!-- Card 3 -->
+                    <a class="group flex flex-col gap-4 rounded-xl bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md md:hidden xl:flex"
+                        href="#">
+                        <div class="aspect-[16/10] w-full overflow-hidden rounded-lg bg-gray-100">
+                            <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Close up of code on a computer screen"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDtmwwkXSep1P9yFrC1U7pb3rdZIl9aMuw0kVBlwB1Id8Y224ajxJ63JKlVluOKgoQ2Qnx0zAZtUjRk9rWv-R0cwG9zMYokdhBsSmcH8vBaIYJdX2EPzSKt7mb1wTj0s9872EjG3dDnKzuU5CH0q4q2Bl8KkEFklcbTr0PAM3nS_jUNcSlJqyCD9xQ39R3yDH1nFAjF6FeEQLVB1GORgvPiIRm35OPEs37Hb-jR7I8QHiy4OdPepXuAdh7bzM8hFaM2J5CYKLxnuk');">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-primary">Tech</span>
+                            <h4
+                                class="text-xl font-bold leading-tight text-text-main group-hover:text-primary transition-colors">
+                                Understanding React Server Components</h4>
+                            <p class="text-sm text-text-secondary line-clamp-2">A deep dive into the future of React and
+                                how it changes the way we build web applications.</p>
+                            <span class="mt-2 text-xs font-medium text-text-secondary/60">Aug 28, 2023 • 12 min
+                                read</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="border-t border-border-light bg-white py-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+                <div class="flex max-w-sm flex-col gap-4">
+                    <div class="flex items-center gap-2 text-text-main">
+                        <div class="flex size-6 items-center justify-center rounded bg-primary text-white">
+                            <span class="material-symbols-outlined text-[16px]">bolt</span>
+                        </div>
+                        <span class="text-lg font-bold">Alex Nguyen Blog</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-text-secondary">
+                        Sharing thoughts on code, design, and the pursuit of a balanced life. Built for the modern
+                        developer.
+                    </p>
+                </div>
+                <div class="flex w-full max-w-md flex-col gap-4">
+                    <h5 class="text-sm font-bold text-text-main">Subscribe to the newsletter</h5>
+                    <form class="flex w-full gap-2">
+                        <input
+                            class="w-full flex-1 rounded-lg border border-border-light bg-[#f8fcfa] px-4 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                            placeholder="Enter your email" type="email" />
+                        <button
+                            class="rounded-lg bg-primary px-6 py-2 text-sm font-medium text-white shadow-sm hover:bg-green-600 transition-colors"
+                            type="button">
+                            Join
+                        </button>
+                    </form>
+                    <p class="text-xs text-text-secondary">No spam, just good vibes. Unsubscribe anytime.</p>
+                </div>
+            </div>
+            <div
+                class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border-light pt-8 text-sm text-text-secondary md:flex-row">
+                <p>© 2023 Alex Nguyen. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-text-main" href="#">Twitter</a>
+                    <a class="hover:text-text-main" href="#">LinkedIn</a>
+                    <a class="hover:text-text-main" href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
