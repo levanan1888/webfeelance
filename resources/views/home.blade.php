@@ -208,7 +208,7 @@
                 <div class="group sharp-card bg-background-light dark:bg-gray-900 overflow-hidden relative cursor-pointer"
                     data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare
                     data-tilt-max-glare="0.2" data-aos="fade-up" onclick="openModal(this)" data-title="E-Commerce Ecosystem"
-                    data-image="https://images.unsplash.com/photo-1481487484168-9b930d5b7d93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+                    data-image="/image/3786933.jpg"
                     data-problem="Khách hàng gặp khó khăn trong việc quản lý tồn kho đa kênh và tốc độ tải trang chậm khiến tỷ lệ bỏ giỏ hàng cao (lên tới 70%). Hệ thống cũ không chịu tải được trong các đợt Flash Sale."
                     data-solution="Xây dựng lại kiến trúc hệ thống sử dụng Microservices. Tích hợp Redis Caching để tăng tốc độ truy xuất dữ liệu. Đồng bộ hóa tồn kho realtime giữa Website, Shopee và Lazada."
                     data-approach="Chúng tôi sử dụng Laravel cho Backend API, Next.js cho Frontend để tối ưu SEO và UX. Hệ thống Queue Worker xử lý đơn hàng bất đồng bộ để đảm bảo server không bị quá tải. Kiến trúc Database được Sharding để xử lý hàng triệu record.">
@@ -216,7 +216,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 h-full">
                         <div
                             class="relative overflow-hidden h-[400px] lg:h-auto border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-gray-800">
-                            <img src="https://images.unsplash.com/photo-1481487484168-9b930d5b7d93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+                            <img src="/image/3786933.jpg"
                                 class="parallax-img w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100">
                             <div
                                 class="absolute inset-0 bg-primary/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity">
@@ -370,10 +370,8 @@
     <section class="py-32 bg-primary text-black relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-5xl md:text-7xl font-black mb-6 tracking-tighter" data-aos="zoom-in">ĐỪNG CHỈ NGHĨ.<br>HÃY LÀM.
+            <h2 class="text-5xl md:text-7xl font-black mb-10 tracking-tighter" data-aos="zoom-in">ĐỪNG CHỈ NGHĨ.<br>HÃY LÀM.
             </h2>
-            <p class="text-xl md:text-2xl font-bold mb-10 opacity-80">Chúng tôi đã sẵn sàng biến ý tưởng của bạn thành hiện
-                thực.</p>
             <a href="{{ route('contact') }}"
                 class="magnetic-btn btn-sharp inline-block px-12 py-5 bg-black text-white text-xl font-bold uppercase tracking-widest hover:bg-white hover:text-black hover:shadow-[8px_8px_0_0_#000]">
                 Bắt đầu dự án
